@@ -69,9 +69,10 @@ if [[ $POSTERIZE -eq 0 || $PNGQUANT -eq 0 ]]; then
 fi
 
 TMPFILE=`mktemp /tmp/convert.XXXXXX`
+LOG=/tmp/log.png-minifly
 
 for f in $*; do
-    echo $f &gt;&gt; /tmp/x
+    ls -l "$f" &gt;&gt; $LOG
     [[ "$f" != *".png" ]] &amp;&amp; continue
     if [[ POSTERIZE -eq 1 &amp;&amp; PNGQUANT -eq 1 ]]; then
         echo converting "$f"
@@ -86,6 +87,7 @@ for f in $*; do
         fi
         [[ -f "$TMPFILE" ]] &amp;&amp; /bin/rm "$TMPFILE"
     fi
+    ls -l "$f" &gt;&gt; $LOG
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -201,7 +203,7 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:607.000000</string>
+				<string>301.500000:647.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

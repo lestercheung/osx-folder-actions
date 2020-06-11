@@ -5,7 +5,7 @@
 - Launch "Folder Actions Set-up" (use spotlight or any launcher of your choice).
 - Add your folder and assign the action script to it.
 
-## png-minifiy
+## png-minifly
 Just a folder action to optimize the size of those gigantic MacOS screenshots.
 You can easily reduce the size of your screenshots by 70%.
 
